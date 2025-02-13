@@ -39,6 +39,13 @@ ResF = [1.060884070058382,2.084236864053378, 3.5562969140950793, 4.5371142618849
 ResF2 = [1.4678899082568808, 2.939949958298582,2.5287739783152627, 2.939115929941618, 3.537948290241868, 4.531276063386155, 5.510425354462051, 6.497080900750626, 7.482902418682235, 8.492910758965804, 9.50208507089241]
 B1 = [0.24,0.38, 0.45, 0.58, 0.71, 0.83, 0.96, 1.09, 1.21]
 B2 = [ 0.11, 0.16,0.2, 0.25, 0.29, 0.38, 0.47, 0.55, 0.64, 0.73, 0.82]
+ResF = np.array(ResF)
+ResF2 = np.array(ResF2)
+B1 = np.array(B1)
+B2 = np.array(B2)
+
+
+
 coef = np.polyfit(B1, ResF,1)
 plt.scatter(B1, ResF, marker = 'o')
 plt.plot(B1, np.poly1d(coef)(B1))
@@ -48,9 +55,3 @@ plt.scatter(B2, ResF2, marker = 'o')
 plt.xlabel('Magnetfeldstärke')
 plt.ylabel('Resonanfrequenz')
 plt.show()
-print(ResF)
-
-print(ResF2)
-
-print(B1)
-print(B2)

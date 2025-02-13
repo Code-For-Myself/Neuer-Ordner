@@ -8,7 +8,7 @@ df = pd.read_csv("NewFile2.csv", delimiter=',')
 Int = df['CH1'].tolist()
 Intensity = np.array(Int)
     #if i < 4:
-       x = np.linspace(1, 2, len(Intensity))
+x = np.linspace(1, 2, len(Intensity))
     #elif i > 3 and i < 7:
     #    x = np.linspace(2, 3, len(Intensity))
     #else: 
